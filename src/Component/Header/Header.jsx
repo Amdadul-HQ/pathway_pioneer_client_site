@@ -12,8 +12,8 @@ const Header = () => {
                     <NavLink>My List</NavLink>
                 </ul>
                 <div className="text-base font-medium space-x-6">
-                    <NavLink>LogIn</NavLink>
                     <NavLink to='/register'>Register</NavLink>
+                    <NavLink to='/login'>LogIn</NavLink>
                 </div>
             </nav>   
         </header>
