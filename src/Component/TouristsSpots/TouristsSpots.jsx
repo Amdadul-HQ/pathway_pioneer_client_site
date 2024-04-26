@@ -1,18 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import { FaUsers } from "react-icons/fa6";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/ContextComponent";
 
 const TouristsSpots = () => {
-    const[touristsSpots,setTouristsSpots] = useState([])
-    useEffect(()=>{
-        fetch('http://localhost:5000/touristspot')
-        .then(res=> res.json())
-        .then(data => {
-            setTouristsSpots(data)
-            console.log(data);
-        })
-    },[])
+
+    const {touristsSpots} = useContext(AuthContext)
     // spot_location,,bordered_radio,,,travel_time,,email,userName
     return (
         <section className="max-w-[1440px] mx-auto my-32">

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -13,20 +13,11 @@ import './styles.css';
 // import required modules
 import { Autoplay, Pagination, Navigation , EffectFade } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/ContextComponent';
 
 const SliderComponent = () => {
-  const [country,setCountry] = useState([])
 
-
-
-  useEffect(()=> {
-    fetch('http://localhost:5000/country')
-    .then(res => res.json())
-    .then(data => {
-      setCountry(data)
-      console.log(data);
-    })
-  },[])
+  const { country } = useContext(AuthContext)
 
     return (
         <section className='h-[700px] max-w-[1440px] mx-auto '>

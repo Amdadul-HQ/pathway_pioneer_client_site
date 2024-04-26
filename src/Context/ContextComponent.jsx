@@ -9,6 +9,23 @@ const ContextComponent = ({children}) => {
 
     const [user,setUser] = useState();
     const [loading , setLoading] = useState(true)
+    const[touristsSpots,setTouristsSpots] = useState([])
+    const [country,setCountry] = useState([])
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/country')
+    .then(res => res.json())
+    .then(data => {
+      setCountry(data)
+      console.log(data);
+    })
+        fetch('http://localhost:5000/touristspot')
+        .then(res=> res.json())
+        .then(data => {
+            setTouristsSpots(data)
+            console.log(data);
+        })
+    },[])
 
     const googleProvider = new GoogleAuthProvider()
     const gitHubProvider = new GithubAuthProvider()
@@ -63,7 +80,7 @@ const ContextComponent = ({children}) => {
 
 
 
-    const info ={ createUser , loginUser , logOut , logInWithGoogle , logInWithGitHub , updateUserProfile , user , loading }
+    const info ={ createUser , loginUser , logOut , logInWithGoogle , logInWithGitHub , updateUserProfile , user , loading , touristsSpots , country }
 
     return (
         <AuthContext.Provider value={info}>
