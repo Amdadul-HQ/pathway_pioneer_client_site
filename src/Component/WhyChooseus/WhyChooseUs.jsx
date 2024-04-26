@@ -4,7 +4,7 @@ import price from '../../assets/price-tag-1.png'
 
 const WhyChooseUs = () => {
     return (
-        <section className='max-w-[1440px] mx-auto'>
+        <section className='max-w-[1440px] mx-auto my-32'>
             <div className="">
                 <div className="">
                     <h1 className="font-Bebas text-5xl text-black text-center font-semibold">Why Choose Us</h1>

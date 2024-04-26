@@ -8,8 +8,8 @@ const Home = () => {
         <>
             <Banner/>
             <TouristsSpots/>
-            <CountrySection/>
             <WhyChooseUs/>
+            <CountrySection/>
         </>
     );
 };

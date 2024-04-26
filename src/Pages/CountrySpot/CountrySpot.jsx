@@ -1,20 +1,18 @@
-import { useContext } from "react";
-import { FaUsers } from "react-icons/fa6";
-import { AiFillDollarCircle } from "react-icons/ai";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../../Context/ContextComponent";
+import React from 'react';
+import { AiFillDollarCircle } from 'react-icons/ai';
+import { FaUsers } from 'react-icons/fa';
+import { Link, useLoaderData } from 'react-router-dom';
 
-const TouristsSpots = () => {
+const CountrySpot = () => {
 
-    const {touristsSpots} = useContext(AuthContext)
-    // spot_location,,bordered_radio,,,travel_time,,email,userName
+    const country = useLoaderData()
+    console.log(country);
+    
     return (
-        <section className="max-w-[1440px] mx-auto my-32">
-            <h1 className="font-Bebas text-5xl text-black text-center font-semibold">Our Tourists Spots <br /> All Over Southeast Asia</h1>
-            <p className="font-Montserrat text-lg text-center mt-4">Delve into the rich history and culture of Southeast Asia by exploring its magnificent temples. From the iconic Angkor Wat complex in Cambodia to the intricate pagodas of Bagan in Myanmar, these architectural wonders offer a glimpse into ancient civilizations and religious traditions..</p>
-            <div className="grid grid-cols-3 gap-6 mt-5">
+        <section className='max-w-[1440px] mx-auto'>
+                <div className='grid grid-cols-3 gap-6'>
                 {
-                    touristsSpots && touristsSpots.slice(0,6).map(spot => <div key={spot.id} className="p-5 border rounded-xl flex flex-col justify-between">
+                    country && country.map(spot => <div key={spot.id} className="p-5 border rounded-xl flex flex-col justify-between">
                     <div>
                         <img className="w-full h-[180px] md:h-[250px] rounded-xl" src={spot.photourl} alt="" />
                     </div>
@@ -32,10 +30,9 @@ const TouristsSpots = () => {
                 </Link>
                 </div>)
                 }
-            </div>
-            
+                </div>
         </section>
     );
 };
 
-export default TouristsSpots;
+export default CountrySpot;

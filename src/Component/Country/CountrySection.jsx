@@ -12,18 +12,17 @@ const CountrySection = () => {
             <div className="grid grid-cols-2 gap-6 my-5">
                 {
                     country && country.map( c => <div key={c._id}>
+                        <Link to={`/touristsSpotCountry/${c.country}`}>
                         <div className="h-96 w-full rounded-lg flex flex-col justify-center text-center items-center" style={{
-                background: `linear-gradient(45deg,rgba(0,0,0,0.07),rgba(0,0,0,0.4)),url(${c.image})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize:'cover',
-                backgroundPosition:'center'
-                }}>
-                    <h1 className="font-Bebas text-gray-200 text-7xl opacity-75 font-medium">{c.country}</h1>
-                    <p className="font-Montserrat text-white text-lg backdrop-blur-sm ">{c.description}</p>
-                    <Link to={`/`}>
-                    
-                    </Link>
-                        </div>
+                            background: `linear-gradient(45deg,rgba(0,0,0,0.07),rgba(0,0,0,0.4)),url(${c.image})`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize:'cover',
+                            backgroundPosition:'center'
+                            }}>
+                            <h1 className="font-Bebas text-gray-200 text-7xl opacity-75 font-medium">{c.country}</h1>
+                            <p className="font-Montserrat text-white text-lg backdrop-blur-sm ">{c.description}</p>
+                            </div>
+                        </Link>
                     </div> )
                 }
             </div>

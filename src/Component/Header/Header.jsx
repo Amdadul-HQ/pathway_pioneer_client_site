@@ -34,7 +34,7 @@ const Header = () => {
                     <NavLink to='/'>Home</NavLink>
                     <NavLink>All Tourists Spot</NavLink>
                     <NavLink to='/AddTouristsSpot'>Add Tourists Spot</NavLink>
-                    <NavLink>My List</NavLink>
+                    <NavLink to={`/touristspotEmail/${user.email}`}>My List</NavLink>
                 </ul>
                 <div className="text-base font-medium space-x-6 flex items-center">
                     <NavLink to='/register'>Register</NavLink>
