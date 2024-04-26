@@ -94,7 +94,8 @@ const Login = () => {
     }
     
     return (
-        <section className='my-20 mx-auto border max-w-xl py-9 px-14 font-Montserrat'>
+        <section  className='font-Montserrat'>
+        <div className="max-w-xl mx-auto border py-9 px-14 my-20">
         <h1 className='font-Bebas text-3xl text-center my-4'>Log In</h1>
         <form onSubmit={handleLogIn} className="mx-auto">
             <div className="relative z-0 w-full mb-5 group">
@@ -134,6 +135,7 @@ const Login = () => {
         <div>
             {/* eslint-disable-next-line react/no-unescaped-entities */}
             <p className="text-center font-Montserrat font-normal">Don't Have a account? <Link className="text-blue-600 hover:underline dark:text-blue-500 font-medium" to="/register">Register</Link></p>
+        </div>
         </div>
     </section>
     );
