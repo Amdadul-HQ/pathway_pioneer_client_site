@@ -1,0 +1,32 @@
+[
+    {
+      "customer_name": "Michael Johnson",
+      "job_title": "Property Investor",
+      "customer_image": "https://i.postimg.cc/wvQZ0fFz/chris-murray-Lr4-TEut-I0-T0-unsplash.jpg",
+      "review": "I had the pleasure of working with ABC Realty to find my dream home, and I couldn't be happier with the entire experience.From the moment I walked into their office, I felt welcomed and supported by their friendly team."
+    },
+    {
+      "customer_name": "Samantha Lee",
+      "job_title": "Homebuyer",
+      "customer_image": "https://i.postimg.cc/fyHFhV6g/damar-jati-pranandaru-D3-XH85y-Ow9-Y-unsplash.jpg",
+      "review": "Once we found the perfect home, Sarah guided me through every step of the buying process, making it feel effortless on my part. She was an excellent negotiator, and thanks to her skills, I was able to secure a fantastic deal on my new home."
+    },
+    {
+      "customer_name": "David Smith",
+      "job_title": "Real Estate Developer",
+      "customer_image": "https://i.postimg.cc/sxf88Y0h/foto-sushi-6anudmp-ILw4-unsplash.jpg",
+      "review": "ABC Realty made my first home buying experience a breeze! Their knowledgeable agents guided me through every step of the process with patience and professionalism. I'm grateful for their support in finding the perfect home for me."
+    },
+    {
+      "customer_name": "Angelina",
+      "job_title": "Real Estate Developer",
+      "customer_image": "https://i.postimg.cc/4dgjvk6w/aiony-haust-3-TLl-97-HNJo-unsplash.jpg",
+      "review": "Statewide Estates is my go-to partner for real estate development projects. Their deep understanding of the market and their network of contacts have been invaluable in finding lucrative investment opportunities. I couldn't be happier with their services."
+    },
+    {
+      "customer_name": "Evan Smith",
+      "job_title": "Real Estate Developer",
+      "customer_image": "https://i.postimg.cc/50yvkyK1/Ethan-Harris.jpg",
+      "review": "As a property investor, I've worked with several real estate agencies, but none have impressed me as much as ABC Realty. Their dedication to their clients and their expertise in the market set them apart. I highly recommend their services."
+    }
+  ]
