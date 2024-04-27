@@ -8,10 +8,10 @@ const ViewTouristsSpot = () => {
     // console.log(spot);
     // country,tourists_spot_name,spot_location,short_description,bordered_radio,totalVisitorsPerYear,photourl,travel_time,average_cost,email,userName
     return (
-        <section className="max-w-[1440px] mx-auto my-20 font-Montserrat">
+        <section className="max-w-[1440px] mx-auto my-20 font-Montserrat md:px-0 px-5">
             <h1 className="text-5xl font-semibold font-Bebas text-center mb-7">Details Page</h1>
-                <div className="grid grid-cols-3 gap-6 justify-center">
-                    <div className="col-span-2">
+                <div className="grid grid-cols-1  md:grid-cols-3 gap-6 justify-center">
+                    <div className="md:col-span-2">
                         <img className="w-full mx-auto rounded-md" src={spot.photourl} alt="" />
                     </div>
                     <div className="flex justify-center">

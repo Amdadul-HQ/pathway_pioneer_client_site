@@ -4,8 +4,8 @@ import { MdEmail } from "react-icons/md";
 const Footer = () => {
     return (
         <footer className="bg-slate-800 text-white">
-            <section className='max-w-[1320px] mx-auto py-32 flex items-center'>
-                <div className='w-3/5'>
+            <section className='max-w-[1440px] gap-5 md:px-0 px-5 mx-auto py-32 flex md:flex-row flex-col-reverse items-center'>
+                <div className='md:w-3/5'>
                     <h1 className='text-5xl font-Bebas font-medium'>PATHWAY PIONEERS</h1>
                     <p className='text-xl  font-Montserrat font-normal'>Always ready to be your friend. Come & Contact with us to share your memorable moments, to share with your best companion.</p>
                     <div className='flex gap-x-5 text-4xl my-8'>
@@ -21,8 +21,8 @@ const Footer = () => {
                         <p className='items-center font-Montserrat flex gap-x-8'><FaLocationDot className=' ' /> 72, Wall street, King Road, Dhaka</p>
                     </div>
                 </div>
-                <div className='w-2/5 font-Montserrat'>
-                    <h1 className='text-5xl  font-Rancho mb-8'>Connect with Us</h1>
+                <div className='md:w-2/5 font-Montserrat'>
+                    <h1 className='text-5xl  font-Rancho mb-8 text-center'>Connect with Us</h1>
                     <form noValidate="" className="space-y-6">
                         <div>
                             <label htmlFor="name" className="text-sm">Full name</label>

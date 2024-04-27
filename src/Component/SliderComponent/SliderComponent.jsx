@@ -44,8 +44,8 @@ const SliderComponent = () => {
                 backgroundSize:'cover',
                 backgroundPosition:'center'
                 }}>
-                    <h1 className='text-white font-medium text-2xl font-Bebas md:px-0 px-5 md:text-8xl'>{item.country}</h1>
-                    <p className='md:w-[1220px] font-Montserrat text-3xl text-gray-300 font-light mt-5'>{item.description}</p>
+                    <h1 className='text-white font-medium text-4xl font-Bebas md:px-0 px-5 md:text-8xl'>{item.country}</h1>
+                    <p className='md:w-[1220px] font-Montserrat md:text-3xl text-gray-300 font-light mt-5'>{item.description}</p>
                     <Link to={`/house/${item.id}`} className=" mt-3 backdrop-blur-3xl relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-black  bg-gray-50 rounded-full hover:text-white group ">
                         <span className="absolute left-0 block w-full h-0 transition-all bg-black opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
                         <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">

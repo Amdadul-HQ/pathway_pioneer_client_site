@@ -62,32 +62,32 @@ const Update = () => {
 
     return (
         <section
-        className="w-full h-screen  bg-[linear-gradient(45deg,rgba(0,0,0,0.7),rgba(0,0,0,0.70)),url('/background.png')] backdrop-blur-7xl bg-cover bg-center bg-no-repeat "
+        className="w-full h-screen  md:mb-0 mb-80  bg-[linear-gradient(45deg,rgba(0,0,0,0.7),rgba(0,0,0,0.70)),url('/background.png')] backdrop-blur-7xl bg-cover bg-center bg-no-repeat "
 
         >
          <div className="max-w-xl mx-auto relative font-Montserrat top-9 text-white ">
 
          <form  className="backdrop-blur-xl border p-6 rounded-lg absolute w-full space-y-4" onSubmit={handleUpdateSpot}>
             <h1 className="font-Montserrat text-4xl text-center font-semibold text-white">Update Tourists Spot</h1>
-                <div className="flex gap-x-5">
-                    <div className="w-[50%]">
+                <div className="flex items-center md:flex-row flex-col gap-x-5">
+                    <div className="lg:w-[50%] w-full">
                         <label className="text-white font-Montserrat" htmlFor="country_Name">Country Name</label>
                         <br />
                         <input defaultValue={country} className="input input-bordered w-full text-black font-Montserrat" type="text" name="country_Name" id="country_Name" placeholder="Country Name" />
                     </div>                
-                    <div className="w-[50%]">
+                    <div className="lg:w-[50%] w-full">
                         <label className="text-white font-Montserrat" htmlFor="tourists_spot_name">Tourists Spot Name</label>
                         <br />
                         <input defaultValue={tourists_spot_name} className="input input-bordered w-full text-black font-Montserrat" type="text" name="tourists_spot_name" id="tourists_spot_name" placeholder="Write Spot Name Here" />
                     </div> 
                 </div>               
-               <div className="flex gap-x-5">
-                    <div className="w-[50%]">
+               <div className="flex items-center md:flex-row flex-col gap-x-5">
+                    <div className="lg:w-[50%] w-full">
                         <label className="text-white font-Montserrat" htmlFor="spot_location">Spot Location</label>
                         <br />
                         <input defaultValue={spot_location} className="input input-bordered w-full text-black font-Montserrat" type="text" name="spot_location" id="spot_location" placeholder="Spot Location Here" />
                     </div>    
-                    <div className="w-[50%]">
+                    <div className="lg:w-[50%] w-full">
                         <label className="text-white font-Montserrat" htmlFor="totalVisitorsPerYearitorsPerYear">Total Visitors PerYear</label>
                         <br />
                         <input defaultValue={totalVisitorsPerYear} className="input input-bordered w-full text-black font-Montserrat" type="text" placeholder="Total Visitors PerYear" id="totalVisitorsPerYear" name="totalVisitorsPerYear" />
@@ -130,7 +130,7 @@ const Update = () => {
                 <button  className="relative items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group">
                     <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-black opacity-[3%]"></span>
                     <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-black opacity-100 group-hover:-translate-x-8"></span>
-                    <span className="relative w-full text-left text-gray-300 transition-colors duration-200 ease-in-out group-hover:text-white">Update Spot</span>
+                    <span className="relative w-full text-left text-black transition-colors duration-200 ease-in-out group-hover:text-white">Update Spot</span>
                     <span className="absolute inset-0 border-2 border-black rounded-full"></span>
                 </button>
                 </div>         
