@@ -47,20 +47,20 @@ const Header = () => {
         setShowMenu(!showMenu)
     }
     return (
-        <header className="max-w-[1440px] mx-auto md:px-0 px-5">
+        <header className="max-w-[1440px] mx-auto lg:px-0 md:px-4 px-5">
             <nav className="font-Montserrat flex justify-between py-5 items-center">
-                <h1 className="font-Bebas text-2xl md:text-4xl">Pathway Pioneers</h1>
-                <ul className={`${showMenu ? "text-base z-50 bg-white p-4 font-medium md:space-x-12 flex md:flex-row flex-col md:static fixed top-20 right-5 transition-all duration-500" : "-right-52 transition-all duration-500 text-base font-medium md:space-x-12 flex md:flex-row flex-col md:static fixed top-20 z-50 "}`}>
+                <h1 className="font-Bebas text-2xl md:text-3xl lg:text-4xl">Pathway Pioneers</h1>
+                <ul className={`${showMenu ? "text-base z-50 bg-white p-4 font-medium lg:space-x-12 flex lg:flex-row flex-col md:flex-col lg:static md:fixed fixed top-20 right-5 transition-all duration-500" : "-right-52 transition-all duration-500 text-base font-medium md:space-x-12 flex lg:flex-row flex-col md:flex-col lg:static md:fixed fixed top-20 z-50 "}`}>
                     <NavLink className={({isActive})=> isActive ? 'border-2 border-black px-4 py-2 text-white bg-black' : 'border-none hover:bg-black hover:text-white hover:px-4 py-2 transition-all duration-300'} to='/'>Home</NavLink>
                     <NavLink className={({isActive})=> isActive ? 'border-2 border-black px-4 py-2 text-white bg-black' : 'border-none hover:bg-black hover:text-white hover:px-4 py-2 transition-all duration-300'} to='/alltouristspot'>All Tourists Spot</NavLink>
                     <NavLink className={({isActive})=> isActive ? 'border-2 border-black px-4 py-2 text-white bg-black' : 'border-none hover:bg-black hover:text-white hover:px-4 py-2 transition-all duration-300'} to='/AddTouristsSpot'>Add Tourists Spot</NavLink>
                     <NavLink className={({isActive})=> isActive ? 'border-2 border-black px-4 py-2 text-white bg-black' : 'border-none hover:bg-black hover:text-white hover:px-4 py-2 transition-all duration-300'} to={`/touristspotEmail/${user?.email}`}>My List</NavLink>
                     <NavLink className={({isActive})=> isActive ? 'border-2 border-black px-4 py-2 text-white bg-black' : 'border-none hover:bg-black hover:text-white hover:px-4 py-2 transition-all duration-300'} to='/register'>Register</NavLink>
                     {
-                        user ? <NavLink className="md:hidden" onClick={handleLogOut}>Log Out</NavLink> : <NavLink className={({isActive})=> isActive ? 'border-2 border-black px-4 py-2 text-white bg-black md:hidden' : 'border-none hover:bg-black hover:text-white hover:px-4 py-2 transition-all duration-300 md:hidden'} to='/login'>Log in</NavLink>
+                        user ? <NavLink className="lg:hidden" onClick={handleLogOut}>Log Out</NavLink> : <NavLink className={({isActive})=> isActive ? 'border-2 border-black px-4 py-2 text-white bg-black lg:hidden' : 'border-none hover:bg-black hover:text-white hover:px-4 py-2 transition-all duration-300 lg:hidden'} to='/login'>Log in</NavLink>
                     }
                     {
-                        user && <div className="p-1 rounded-full border-2 md:hidden">
+                        user && <div className="p-1 rounded-full border-2 lg:hidden">
                         <img className="w-10 h-10 rounded-full " data-tooltip-id="my-tooltip" data-tooltip-place="right" data-tooltip-content={user?.displayName}  src={user?.photoURL || <FaUser className="text-2xl"></FaUser>} alt="" />
                     </div>
                     }
@@ -68,9 +68,9 @@ const Header = () => {
                 </ul>
                 <div className="text-base font-medium space-x-6 flex items-center">
                     {
-                        user ? <NavLink className="md:flex hidden" onClick={handleLogOut}>Log Out</NavLink> : <NavLink className={({isActive})=> isActive ? 'border-2 md:flex hidden border-black px-4 py-2 text-white bg-black ' : 'border-none md:flex hidden hover:bg-black hover:text-white hover:px-4 py-2 transition-all duration-300'} to='/login'>Log in</NavLink>
+                        user ? <NavLink className="md:hidden lg:flex hidden" onClick={handleLogOut}>Log Out</NavLink> : <NavLink className={({isActive})=> isActive ? 'border-2 md:flex hidden border-black px-4 py-2 text-white bg-black ' : 'border-none md:flex hidden hover:bg-black hover:text-white hover:px-4 py-2 transition-all duration-300'} to='/login'>Log in</NavLink>
                     }
-                    <div className="md:flex hidden">
+                    <div className="md:hidden lg:flex hidden">
                     <label className="swap swap-rotate">
   
   {/* this hidden checkbox controls the state */}
@@ -85,14 +85,14 @@ const Header = () => {
   </label>
                     </div>
                     {
-                        user && <div className="p-1 rounded-full border-2 md:flex hidden">
+                        user && <div className="p-1 rounded-full border-2 md:hidden lg:flex hidden">
                         <img className="w-10 h-10 rounded-full " data-tooltip-id="my-tooltip" data-tooltip-place="right" data-tooltip-content={user?.displayName}  src={user?.photoURL || <FaUser className="text-2xl"></FaUser>} alt="" />
                     </div>
                     }
                     <Tooltip id="my-tooltip" />   
                 </div>
-               <div className="md:hidden flex items-center gap-x-3">
-               <div className="md:hidden">
+               <div className="lg:hidden flex items-center gap-x-3">
+               <div className="lg:hidden">
                     <label className="swap swap-rotate">
   
   {/* this hidden checkbox controls the state */}

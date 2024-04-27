@@ -21,7 +21,7 @@ const ReviewSilider = ({review}) => {
 
     return (
         <>
-     <section className='md:hidden'>
+     <section className='lg:hidden md:hidden flex'>
         <Swiper
             slidesPerView={1}
             centeredSlides={true}
@@ -38,7 +38,24 @@ const ReviewSilider = ({review}) => {
             }
           </Swiper>
      </section>
-     <section className='md:flex hidden'>
+     <section className='lg:hidden md:flex hidden'>
+        <Swiper
+            slidesPerView={2}
+            centeredSlides={true}
+            spaceBetween={30}
+            grabCursor={true}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            {
+                review && review.map( (r,inx) => <SwiperSlide key={inx}><ReviewSection key={inx} r={r} /></SwiperSlide> )
+            }
+          </Swiper>
+     </section>
+     <section className='lg:flex md:hidden hidden'>
      <Swiper
         slidesPerView={3}
         centeredSlides={true}

@@ -4,14 +4,14 @@ import price from '../../assets/price-tag-1.png'
 
 const WhyChooseUs = () => {
     return (
-        <section className='max-w-[1440px] mx-auto my-32 md:px-0 px-5'>
+        <section className='max-w-[1440px] mx-auto my-32 lg:px-0 md:px-4 px-5'>
             <div className="">
                 <div className="">
                     <h1 className="font-Bebas md:text-5xl text-3xl text-black text-center font-semibold">Why Choose Us</h1>
                     <p className="font-Montserrat md:text-lg text-base text-center mt-4">Choose us for expert guidance, personalized experiences, and customer-centric
                         support. Enjoy meticulously planned adventures tailored to your preferences.</p>
                 </div>
-                <div className="flex md:flex-row flex-col my-7 gap-6">
+                <div className="flex lg:flex-row md:flex-col flex-col my-7 gap-6">
                     <div className="bg-sky-200 rounded-xl p-5">
                         <img className='ml-4 mt-4' src={hotel} alt=""/>
                         <h3 className="font-Bebas text-3xl font-semibold mt-4">Handpicked Hotels</h3>

@@ -9,7 +9,7 @@ const CountrySpot = () => {
     
     return (
         <section className='max-w-[1440px] mx-auto md:px-0 px-5'>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+                <div className='grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-6'>
                 {
                     country && country.map(spot => <div key={spot.id} className="p-5 border rounded-xl flex flex-col justify-between">
                     <div>

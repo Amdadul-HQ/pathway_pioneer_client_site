@@ -6,7 +6,7 @@ const CountrySection = () => {
     const { country } = useContext(AuthContext)
     
     return (
-        <section className="max-w-[1440px] mx-auto my-32 md:px-0 px-5">
+        <section className="max-w-[1440px] mx-auto my-32 lg:px-0 md:px-4 px-5">
             <h1 className="font-Bebas md:text-5xl text-3xl text-black text-center font-semibold">Our Most Visited Country</h1>
             <p className="font-Montserrat md:text-lg text-base text-center mt-4">Southeast Asia: Unveiling Thailand, Indonesia, Vietnam, Malaysia, Cambodia & Bangladesh</p>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-6 my-5">

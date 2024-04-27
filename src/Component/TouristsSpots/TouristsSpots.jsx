@@ -17,10 +17,10 @@ const TouristsSpots = () => {
 
     // spot_location,,bordered_radio,,,travel_time,,email,userName
     return (
-        <section className="max-w-[1440px] mx-auto my-32 md:px-0 px-5">
+        <section className="max-w-[1440px] mx-auto my-32 lg:px-0 md:px-4 px-5">
             <h1 className="font-Bebas md:text-5xl text-3xl text-black text-center font-semibold">Our Tourists Spots <br /> All Over Southeast Asia</h1>
             <p className="font-Montserrat md:text-lg text-base text-center mt-4">Delve into the rich history and culture of Southeast Asia by exploring its magnificent temples. From the iconic Angkor Wat complex in Cambodia to the intricate pagodas of Bagan in Myanmar, these architectural wonders offer a glimpse into ancient civilizations and religious traditions..</p>
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mt-5">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-5">
                 {
                     touristsSpots && touristsSpots.slice(0,6).map(spot => <div key={spot.id} className="p-5 border rounded-xl flex flex-col justify-between">
                     <div>

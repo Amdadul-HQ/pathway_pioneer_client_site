@@ -34,7 +34,7 @@ const AllTouristsSpot = () => {
 			</ul>
 			</details>
 			</div>
-            <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 mt-5">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-5">
                 {
                     displaytouristSpots && touristSpots.map(spot => <div key={spot.id} className="p-5 border rounded-xl flex flex-col justify-between">
                     <div>
