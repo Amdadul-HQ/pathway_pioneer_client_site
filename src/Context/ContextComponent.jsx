@@ -13,12 +13,12 @@ const ContextComponent = ({children}) => {
     const [country,setCountry] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/country')
+        fetch('https://pathway-pioneers-server-site.vercel.app/country')
     .then(res => res.json())
     .then(data => {
       setCountry(data)
     })
-        fetch('http://localhost:5000/touristspot')
+        fetch('https://pathway-pioneers-server-site.vercel.app/touristspot')
         .then(res=> res.json())
         .then(data => {
             setTouristsSpots(data)

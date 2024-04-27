@@ -27,7 +27,7 @@ const AddTouristsSpot = () => {
         const userName = user.displayName;
         const data = {country,tourists_spot_name,spot_location,short_description,bordered_radio,totalVisitorsPerYear,photourl,travel_time,average_cost,email,userName}
         // /touristspot
-        fetch('http://localhost:5000/touristspot',{
+        fetch('https://pathway-pioneers-server-site.vercel.app/touristspot',{
             method:"POST",
             headers:{
                 "content-type":"application/json"

@@ -32,7 +32,7 @@ const MyAddedList = () => {
             reverseButtons: true
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/touristspot/${id}`,{
+                fetch(`https://pathway-pioneers-server-site.vercel.app/touristspot/${id}`,{
                     method:'DELETE'
                 })
                 .then(res => res.json())

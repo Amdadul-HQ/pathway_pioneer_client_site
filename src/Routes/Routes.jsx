@@ -37,17 +37,17 @@ const router = createBrowserRouter([
             {
                 path:'/touristsSpot/:id',
                 element:<PrivateComponent><ViewTouristsSpot/></PrivateComponent>,
-                loader: ({params})=> fetch(`http://localhost:5000/touristspot/${params.id}`)
+                loader: ({params})=> fetch(`https://pathway-pioneers-server-site.vercel.app/touristspot/${params.id}`)
             },
             {
                 path:'/touristsSpotCountry/:country',
                 element:<CountrySpot/>,
-                loader: ({params}) => fetch(`http://localhost:5000/touristspotCountry/${params.country}`)
+                loader: ({params}) => fetch(`https://pathway-pioneers-server-site.vercel.app/touristspotCountry/${params.country}`)
             },
             {
                 path:'/touristspotEmail/:email',
                 element:<PrivateComponent><MyAddedList/></PrivateComponent>,
-                loader:({params})=> fetch(`http://localhost:5000/touristspotEmail/${params.email}`)
+                loader:({params})=> fetch(`https://pathway-pioneers-server-site.vercel.app/touristspotEmail/${params.email}`)
             },
             {
                 path:'/alltouristspot',
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
             {
                 path:'/update/:id',
                 element:<PrivateComponent><Update/></PrivateComponent>,
-                loader:({params}) => fetch(`http://localhost:5000/touristspot/${params.id}`)
+                loader:({params}) => fetch(`https://pathway-pioneers-server-site.vercel.app/touristspot/${params.id}`)
             }
         ]
     }

@@ -9,7 +9,7 @@ const TouristsSpots = () => {
     const [touristsSpots,setTouristsSpots] = useState([])
 
     useEffect(()=> {
-        fetch('http://localhost:5000/touristspot')
+        fetch('https://pathway-pioneers-server-site.vercel.app/touristspot')
         .then(res => res.json())
         .then(data => {
             setTouristsSpots(data)

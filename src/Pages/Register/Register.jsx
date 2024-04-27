@@ -5,8 +5,6 @@ import { AuthContext } from '../../Context/ContextComponent';
 import Swal from 'sweetalert2';
 import { IoEye , IoEyeOff  } from "react-icons/io5";
 import { Fade } from 'react-awesome-reveal';
-import Lottie from 'react-lottie';
-import animationData from '../../assets/animation.json'
 
 const Register = () => {
 
@@ -101,10 +99,6 @@ const Register = () => {
             <Fade>
                 <h1 className='font-Bebas text-3xl text-center my-4 mb-7'>Create an account</h1>
             </Fade>
-            
-            <div>
-                <Lottie animationData={animationData}/>
-            </div>
             <form onSubmit={handleRegister} className="mx-auto">
                 <div className="grid md:grid-cols-2 md:gap-6">
                     <div className="relative z-0 w-full mb-5 group">

@@ -44,7 +44,7 @@ const Update = () => {
             updateemail,
             updateuserName
         }
-        fetch(`http://localhost:5000/touristspot/${_id}`,{
+        fetch(`https://pathway-pioneers-server-site.vercel.app/touristspot/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'
