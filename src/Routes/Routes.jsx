@@ -52,7 +52,6 @@ const router = createBrowserRouter([
             {
                 path:'/alltouristspot',
                 element:<PrivateComponent><AllTouristsSpot/></PrivateComponent>,
-                loader:() => fetch('http://localhost:5000/touristspot')
             },
             {
                 path:'/update/:id',

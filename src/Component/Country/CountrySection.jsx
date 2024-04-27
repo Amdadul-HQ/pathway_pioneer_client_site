@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CountrySection = () => {
     const { country } = useContext(AuthContext)
-    console.log(country);
+    
     return (
         <section className="max-w-[1440px] mx-auto my-32">
             <h1 className="font-Bebas text-5xl text-black text-center font-semibold">Our Most Visited Country</h1>

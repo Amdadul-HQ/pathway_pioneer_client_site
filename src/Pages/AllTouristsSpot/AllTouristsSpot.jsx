@@ -1,19 +1,42 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { FaUsers } from "react-icons/fa6";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const AllTouristsSpot = () => {
-    const allTouristSpot = useLoaderData()
-    const [touristSpots,setTouristSpots] = useState(allTouristSpot)
+    // const allTouristSpot = useLoaderData()
+    const [touristSpots,setTouristSpots] = useState([])
+    const [displaytouristSpots,setDisplayTouristSpots] = useState(touristSpots)
+    useEffect(()=>{
+        fetch('http://localhost:5000/touristspot')
+        .then(res => res.json())
+        .then(data => {
+            setTouristSpots(data)
+        })
+    },[])
+
+    
+    const handleSort = () => {
+
+        setDisplayTouristSpots(touristSpots.sort((a,b)=> b.average_cost - a.average_cost))
+    
+    }
 
 
     return (
         <section className="max-w-[1440px] mx-auto">
+             <div className="flex justify-center my-5">
+			<details className="dropdown">
+			<summary className="m-1 btn bg-[#23BE0A] text-lg font-semibold text-white hover:text-[#131313] mx-auto">Sort By</summary>
+			<ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+				<Link to='' className="text-base font-medium py-2 rounded-md hover:bg-[#23BE0A] text-center" onClick={handleSort}>Average Cost (High to Low)</Link>
+			</ul>
+			</details>
+			</div>
             <div className="grid grid-cols-3 gap-6 mt-5">
                 {
-                    touristSpots && touristSpots.map(spot => <div key={spot.id} className="p-5 border rounded-xl flex flex-col justify-between">
+                    displaytouristSpots && touristSpots.map(spot => <div key={spot.id} className="p-5 border rounded-xl flex flex-col justify-between">
                     <div>
                         <img className="w-full h-[180px] md:h-[250px] rounded-xl" src={spot.photourl} alt="" />
                     </div>

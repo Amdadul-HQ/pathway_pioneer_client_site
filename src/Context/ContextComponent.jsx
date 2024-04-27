@@ -17,13 +17,11 @@ const ContextComponent = ({children}) => {
     .then(res => res.json())
     .then(data => {
       setCountry(data)
-      console.log(data);
     })
         fetch('http://localhost:5000/touristspot')
         .then(res=> res.json())
         .then(data => {
             setTouristsSpots(data)
-            console.log(data);
         })
     },[])
 
@@ -68,7 +66,6 @@ const ContextComponent = ({children}) => {
             if(currentUser){
                 setUser(currentUser)
                 setLoading(false)
-                console.log(currentUser);
             }
             else{
                 setUser(null)
