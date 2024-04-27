@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Context/ContextComponent";
 import Swal from "sweetalert2";
 
@@ -6,12 +6,15 @@ import Swal from "sweetalert2";
 const AddTouristsSpot = () => {
 
     const{ user } =  useContext(AuthContext)
-
+    const [selectedCountry, setSelectedCountry] = useState('');
+    const handleSelectChange = (event) => {
+        setSelectedCountry(event.target.value);
+      };
 
     const handleAddSpot = e =>{
         e.preventDefault()
         const form = e.target ;
-        const country = form.country_Name.value.toLowerCase();
+        const country = selectedCountry;
         const tourists_spot_name = form.tourists_spot_name.value;
         const spot_location = form.spot_location.value;
         const short_description = form.short_description.value;
@@ -58,7 +61,15 @@ const AddTouristsSpot = () => {
                     <div className="md:w-[50%] w-full">
                         <label className="text-white font-Montserrat" htmlFor="country_Name">Country Name</label>
                         <br />
-                        <input className="input input-bordered w-full text-black font-Montserrat" type="text" name="country_Name" id="country_Name" placeholder="Country Name" required />
+                    <select value={selectedCountry} required id="country_Name" onChange={handleSelectChange} className="select w-full text-black font-Montserrat select-bordered ">
+                        <option selected >Select Country</option>
+                        <option value="bangladesh">Bangladesh</option>
+                        <option value="thailand">Thailand</option>
+                        <option value="indonesia">Indonesia</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="vietnam">Vietnam</option>
+                        <option value="cambodia">Cambodia</option>
+                    </select>
                     </div>                
                     <div className="md:w-[50%] w-full">
                         <label className="text-white font-Montserrat" htmlFor="tourists_spot_name">Tourists Spot Name</label>
