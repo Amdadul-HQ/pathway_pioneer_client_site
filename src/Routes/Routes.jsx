@@ -8,6 +8,9 @@ import AddTouristsSpot from "../Pages/AddTouristsSpot/AddTouristsSpot";
 import ViewTouristsSpot from "../Pages/ViewTouristsSpot/ViewTouristsSpot";
 import CountrySpot from "../Pages/CountrySpot/CountrySpot";
 import MyAddedList from "../Pages/MyaddedList/MyAddedList";
+import AllTouristsSpot from "../Pages/AllTouristsSpot/AllTouristsSpot";
+import Update from "../Pages/Update/Update";
+import PrivateComponent from "../Private/PrivateComponent";
 
 const router = createBrowserRouter([
     {
@@ -29,11 +32,11 @@ const router = createBrowserRouter([
             },
             {
                 path:'/AddTouristsSpot',
-                element:<AddTouristsSpot/>
+                element:<PrivateComponent><AddTouristsSpot/></PrivateComponent>
             },
             {
                 path:'/touristsSpot/:id',
-                element:<ViewTouristsSpot/>,
+                element:<PrivateComponent><ViewTouristsSpot/></PrivateComponent>,
                 loader: ({params})=> fetch(`http://localhost:5000/touristspot/${params.id}`)
             },
             {
@@ -43,8 +46,18 @@ const router = createBrowserRouter([
             },
             {
                 path:'/touristspotEmail/:email',
-                element:<MyAddedList/>,
+                element:<PrivateComponent><MyAddedList/></PrivateComponent>,
                 loader:({params})=> fetch(`http://localhost:5000/touristspotEmail/${params.email}`)
+            },
+            {
+                path:'/alltouristspot',
+                element:<PrivateComponent><AllTouristsSpot/></PrivateComponent>,
+                loader:() => fetch('http://localhost:5000/touristspot')
+            },
+            {
+                path:'/update/:id',
+                element:<PrivateComponent><Update/></PrivateComponent>,
+                loader:({params}) => fetch(`http://localhost:5000/touristspot/${params.id}`)
             }
         ]
     }

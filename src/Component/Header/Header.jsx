@@ -32,9 +32,9 @@ const Header = () => {
                 <h1 className="font-Bebas text-4xl">Pathway Pioneers</h1>
                 <ul className="text-base font-medium space-x-12">
                     <NavLink to='/'>Home</NavLink>
-                    <NavLink>All Tourists Spot</NavLink>
+                    <NavLink to='/alltouristspot'>All Tourists Spot</NavLink>
                     <NavLink to='/AddTouristsSpot'>Add Tourists Spot</NavLink>
-                    <NavLink to={`/touristspotEmail/${user.email}`}>My List</NavLink>
+                    <NavLink to={`/touristspotEmail/${user?.email}`}>My List</NavLink>
                 </ul>
                 <div className="text-base font-medium space-x-6 flex items-center">
                     <NavLink to='/register'>Register</NavLink>
