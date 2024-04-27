@@ -1,14 +1,18 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Context/ContextComponent";
 import { Link } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 
 const CountrySection = () => {
     const { country } = useContext(AuthContext)
     
     return (
         <section className="max-w-[1440px] mx-auto my-32 lg:px-0 md:px-4 px-5">
+            <Fade direction="up" cascade damping={0.5}>
             <h1 className="font-Bebas md:text-5xl text-3xl text-black text-center font-semibold">Our Most Visited Country</h1>
             <p className="font-Montserrat md:text-lg text-base text-center mt-4">Southeast Asia: Unveiling Thailand, Indonesia, Vietnam, Malaysia, Cambodia & Bangladesh</p>
+            </Fade>
+            <Fade>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-6 my-5">
                 {
                     country && country.map( c => <div key={c._id}>
@@ -26,6 +30,7 @@ const CountrySection = () => {
                     </div> )
                 }
             </div>
+            </Fade>
         </section>
     );
 };

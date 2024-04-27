@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 const Footer = () => {
     return (
         <footer className="bg-slate-800 text-white">
-            <section className='max-w-[1440px] gap-5 md:px-0 px-5 mx-auto py-32 flex md:flex-row flex-col-reverse items-center'>
+            <section className='max-w-[1440px] gap-5 lg:px-0 md:px-4 px-5 mx-auto py-32 flex md:flex-row flex-col-reverse items-center'>
                 <div className='md:w-3/5'>
                     <h1 className='text-5xl font-Bebas font-medium'>PATHWAY PIONEERS</h1>
                     <p className='text-xl  font-Montserrat font-normal'>Always ready to be your friend. Come & Contact with us to share your memorable moments, to share with your best companion.</p>

@@ -4,6 +4,7 @@ import { IoEye, IoEyeOff } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/ContextComponent";
 import Swal from "sweetalert2";
+import { Fade } from "react-awesome-reveal";
 
 
 const Login = () => {
@@ -96,8 +97,11 @@ const Login = () => {
     return (
         <section  className='font-Montserrat'>
         <div className="max-w-xl mx-auto border py-9 px-14 my-20">
-        <h1 className='font-Bebas text-3xl text-center my-4'>Log In</h1>
-        <form onSubmit={handleLogIn} className="mx-auto">
+            <Fade>
+              <h1 className='font-Bebas text-3xl text-center my-4'>Log In</h1>
+            </Fade>
+            <Fade cascade damping={1}>
+            <form onSubmit={handleLogIn} className="mx-auto">
             <div className="relative z-0 w-full mb-5 group">
                 <input type="email" name="email" id="email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
                 <label htmlFor="email" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-8 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Email address</label>
@@ -121,6 +125,8 @@ const Login = () => {
                     </button>
                 </div>
         </form>
+            </Fade>
+        
         <div className="divider">OR</div>
         <div className="text-4xl justify-center flex gap-x-6 my-4">
             <div onClick={handleGoogleLogin} className=" btn items-center justify-center border rounded-lg py-2 text-blue-700">

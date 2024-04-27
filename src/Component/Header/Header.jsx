@@ -4,6 +4,7 @@ import { AuthContext } from "../../Context/ContextComponent";
 import Swal from "sweetalert2";
 import { Tooltip } from 'react-tooltip'
 import { FaUser } from "react-icons/fa";
+import { Fade } from "react-awesome-reveal";
 
 const Header = () => {
 
@@ -49,7 +50,7 @@ const Header = () => {
     return (
         <header className="max-w-[1440px] mx-auto lg:px-0 md:px-4 px-5">
             <nav className="font-Montserrat flex justify-between py-5 items-center">
-                <h1 className="font-Bebas text-2xl md:text-3xl lg:text-4xl">Pathway Pioneers</h1>
+                <h1 className="font-Bebas text-2xl md:text-3xl lg:text-4xl"><Fade direction="left" cascade damping={0.1}>Pathway Pioneers</Fade></h1>
                 <ul className={`${showMenu ? "text-base z-50 bg-white p-4 font-medium lg:space-x-12 flex lg:flex-row flex-col md:flex-col lg:static md:fixed fixed top-20 right-5 transition-all duration-500" : "-right-52 transition-all duration-500 text-base font-medium md:space-x-12 flex lg:flex-row flex-col md:flex-col lg:static md:fixed fixed top-20 z-50 "}`}>
                     <NavLink className={({isActive})=> isActive ? 'border-2 border-black px-4 py-2 text-white bg-black' : 'border-none hover:bg-black hover:text-white hover:px-4 py-2 transition-all duration-300'} to='/'>Home</NavLink>
                     <NavLink className={({isActive})=> isActive ? 'border-2 border-black px-4 py-2 text-white bg-black' : 'border-none hover:bg-black hover:text-white hover:px-4 py-2 transition-all duration-300'} to='/alltouristspot'>All Tourists Spot</NavLink>
