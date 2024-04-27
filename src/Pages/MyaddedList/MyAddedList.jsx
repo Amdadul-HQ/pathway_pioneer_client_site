@@ -44,7 +44,7 @@ const MyAddedList = () => {
                             text: "Your file has been deleted.",
                             icon: "success"
                         });
-                    const newList = list.filter(person => person._id !== id );
+                    const newList = list.filter(i => i._id !== id );
                     setList(newList)
                     }
                 })
@@ -63,29 +63,68 @@ const MyAddedList = () => {
        
     }
     // country,tourists_spot_name,spot_location,short_description,bordered_radio,totalVisitorsPerYear,photourl,travel_time,average_cost,email,userName
-    return (
-        <section className='max-w-[1440px] mx-auto'>
-            <h1 className='text-center my-10 font-Bebas text-5xl '>My Added Place</h1>
-            <div className='grid grid-cols-3 gap-6'>
+    return (<section 
+    className='w-full mt-5 mb-32'
+    >
+        <div className='max-w-[1440px] mx-auto font-Montserrat'>
+        <div className="font-Raleway">
+            <table className="table">
+                {/* head */}
+                <thead className='text-xl font-medium'>
+                <tr>
+                    <th>Country Name</th>
+                    <th>Tourist Spot Name</th>
+                    <th className='text-center'>Action</th>
+                </tr>
+                </thead>
+                <tbody className='text-base font-normal'>
+                {/* row 1 */}
                 {
-                    list && list.map( item => <div className="items-center justify-between bg-[#F5F4F1] rounded-xl p-5" key={item._id}>    
-                    <div>
-                        <img className="w-full h-[300px] rounded-md" src={item.photourl} alt="" />
-                    </div>
-                    <div className="font-Montserrat mt-2">
-                        <p className="text-[#5C5B5B] text-lg font-normal font-Montserrat uppercase"><span className="text-[#1B1A1A] text-base font-semibold">Country :</span> {item.country}</p>
-                        <p className="text-[#5C5B5B] text-lg font-normal font-Montserrat uppercase"><span className="text-[#1B1A1A] text-base font-semibold">Tourist Spot Name: </span> {item.tourists_spot_name}</p>
-                        <p className="text-[#5C5B5B] text-lg font-normal font-Montserrat uppercase"><span className="text-[#1B1A1A] text-base font-semibold">Total Visitors Per year: </span> {item.totalVisitorsPerYear}</p>
-                    </div>
-                    <div className="flex justify-between gap-6 font-Raleway mt-3 font-Montserrat">
-                        <Link to={`/touristsSpot/${item._id}`} className="bg-[#D2B48C] p-3 w-full text-white text-2xl rounded-xl text-center justify-center flex"><IoEyeSharp className='text-center'/></Link>
-                        <Link to={`/update/${item._id}`} className="bg-[#3C393B] p-3 w-full text-white text-2xl rounded-xl text-center justify-center flex"><MdEdit className='text-center'/></Link>
-                        <Link onClick={()=> handleDeletePlace(item._id)} className="bg-[#EA4744] w-full font-Raleway p-3 text-white text-2xl rounded-xl text-center justify-center flex"><MdDelete className='text-center'/></Link>
-                    </div>
-                </div> )
+                    list && list.map( i => <tr key={i._id}>
+                        
+                        <td className='uppercase'>
+                        {
+                            i.country
+                        }
+                        <br/>
+                        </td>
+                        <td>{i.tourists_spot_name}</td>
+                    
+                        <td className='flex gap-x-3 justify-center'>
+                        <Link to={`/touristsSpot/${i._id}`} className="bg-[#D2B48C] p-3  text-white text-2xl rounded-xl text-center justify-center flex"><IoEyeSharp className='text-center'/></Link>
+                            <Link to={`/update/${i._id}`} className='bg-[#3C393B] text-white p-3 rounded-lg text-xl flex justify-center items-center'><button><MdEdit/></button></Link>
+                            <Link onClick={()=> handleDeletePlace(i._id)} className='bg-[#EA4744] text-white p-3 rounded-lg text-xl flex justify-center items-center'><button><MdDelete/></button></Link>
+                        </td>
+                    </tr> )
                 }
+                </tbody>
+            </table>
             </div>
-        </section>
+        </div>
+    </section>
+        
+        // <section className='max-w-[1440px] mx-auto'>
+        //     <h1 className='text-center my-10 font-Bebas text-5xl '>My Added Place</h1>
+        //     <div className='grid grid-cols-3 gap-6'>
+        //         {
+        //             list && list.map( item => <div className="items-center justify-between bg-[#F5F4F1] rounded-xl p-5" key={item._id}>    
+        //             <div>
+        //                 <img className="w-full h-[300px] rounded-md" src={item.photourl} alt="" />
+        //             </div>
+        //             <div className="font-Montserrat mt-2">
+        //                 <p className="text-[#5C5B5B] text-lg font-normal font-Montserrat uppercase"><span className="text-[#1B1A1A] text-base font-semibold">Country :</span> {item.country}</p>
+        //                 <p className="text-[#5C5B5B] text-lg font-normal font-Montserrat uppercase"><span className="text-[#1B1A1A] text-base font-semibold">Tourist Spot Name: </span> {item.tourists_spot_name}</p>
+        //                 <p className="text-[#5C5B5B] text-lg font-normal font-Montserrat uppercase"><span className="text-[#1B1A1A] text-base font-semibold">Total Visitors Per year: </span> {item.totalVisitorsPerYear}</p>
+        //             </div>
+        //             <div className="flex justify-between gap-6 font-Raleway mt-3 font-Montserrat">
+        //                 <Link to={`/touristsSpot/${item._id}`} className="bg-[#D2B48C] p-3 w-full text-white text-2xl rounded-xl text-center justify-center flex"><IoEyeSharp className='text-center'/></Link>
+        //                 <Link to={`/update/${item._id}`} className="bg-[#3C393B] p-3 w-full text-white text-2xl rounded-xl text-center justify-center flex"><MdEdit className='text-center'/></Link>
+        //                 <Link onClick={()=> handleDeletePlace(item._id)} className="bg-[#EA4744] w-full font-Raleway p-3 text-white text-2xl rounded-xl text-center justify-center flex"><MdDelete className='text-center'/></Link>
+        //             </div>
+        //         </div> )
+        //         }
+        //     </div>
+        // </section>
     );
 };
 

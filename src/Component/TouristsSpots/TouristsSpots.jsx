@@ -1,12 +1,20 @@
-import { useContext } from "react";
+import {  useEffect, useState } from "react";
 import { FaUsers } from "react-icons/fa6";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../Context/ContextComponent";
 
 const TouristsSpots = () => {
 
-    const {touristsSpots} = useContext(AuthContext)
+    const [touristsSpots,setTouristsSpots] = useState([])
+
+    useEffect(()=> {
+        fetch('http://localhost:5000/touristspot')
+        .then(res => res.json())
+        .then(data => {
+            setTouristsSpots(data)
+        })
+    },[])
+
     // spot_location,,bordered_radio,,,travel_time,,email,userName
     return (
         <section className="max-w-[1440px] mx-auto my-32">
@@ -20,7 +28,7 @@ const TouristsSpots = () => {
                     </div>
                     <p className="text-2xl text-[#00a2ff] mt-2 font-medium font-Bebas">{spot.country}</p>
                     <h1 className="text-[#010101] text-4xl uppercase font-medium md:text-3xl mb-4 font-Montserrat">{spot.tourists_spot_name}</h1>
-                    <p className="text-[#5A5959] font-medium">{spot.short_description.slice(0,100)}...<Link to={`/spot/${spot.id}`} className="text-[#6E00FF]">Show More</Link></p>
+                    <p className="text-[#5A5959] font-medium">{spot.short_description.slice(0,100)}...</p>
                     <p className="flex items-center gap-x-2 text-lg font-Montserrat mt-3"><span className="text-3xl"><AiFillDollarCircle/></span> Average Cost: {spot.average_cost}</p>
                     <p className="flex items-center gap-x-2 text-lg font-Montserrat mt-3"><span className="text-3xl"><FaUsers/></span> Total Visitors Per Year: {spot.totalVisitorsPerYear}</p>
                     <Link to={`/touristsSpot/${spot._id}`} className=" mt-3 backdrop-blur-3xl relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-black border-2 border-black bg-gray-50 rounded-full hover:text-white group ">
