@@ -90,7 +90,7 @@ const Header = () => {
                     </div>
 
                     {
-                        user && <div className="dropdown dropdown-end z-50">
+                        user && <div className="dropdown md:hidden lg:flex hidden dropdown-end z-50">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div id="clickable" className="w-10 rounded-full">
                             <img className="w-10 h-10 rounded-full " data-tooltip-id="my-tooltip" data-tooltip-place="right" data-tooltip-content={user?.displayName}  src={user?.photoURL || <FaUser className="text-2xl"></FaUser>} alt="" />
