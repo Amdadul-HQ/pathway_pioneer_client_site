@@ -74,6 +74,8 @@ const MyAddedList = () => {
                 <tr>
                     <th className='p-0'>Country Name</th>
                     <th className='p-0'>Tourist Spot Name</th>
+                    <th className='p-0 md:flex hidden'>Average Cost</th>
+                    <th></th>
                     <th className='text-center p-0'>Action</th>
                 </tr>
                 </thead>
@@ -89,6 +91,8 @@ const MyAddedList = () => {
                         <br/>
                         </td>
                         <td>{i.tourists_spot_name}</td>
+                        <td className='md:flex hidden'>{i.average_cost}</td>
+                        <td></td>
                     
                         <td className='flex gap-2 md:gap-x-3 justify-center'>
                         <Link to={`/touristsSpot/${i._id}`} className="bg-[#D2B48C] md:p-3  text-white text-2xl rounded-xl text-center justify-center flex"><IoEyeSharp className='text-center'/></Link>
