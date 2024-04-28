@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/ContextComponent";
 import Swal from "sweetalert2";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -96,6 +97,9 @@ const Login = () => {
     
     return (
         <section  className='font-Montserrat'>
+            <Helmet>
+                <title>Log In</title>
+            </Helmet>
         <div className="max-w-xl mx-auto border py-9 px-14 my-20">
             <Fade>
               <h1 className='font-Bebas text-3xl text-center my-4'>Log In</h1>

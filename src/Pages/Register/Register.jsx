@@ -5,6 +5,7 @@ import { AuthContext } from '../../Context/ContextComponent';
 import Swal from 'sweetalert2';
 import { IoEye , IoEyeOff  } from "react-icons/io5";
 import { Fade } from 'react-awesome-reveal';
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
 
@@ -96,6 +97,9 @@ const Register = () => {
 
     return (
         <section className='my-20 mx-auto border max-w-xl py-9 px-14 font-Montserrat'>
+            <Helmet>
+                <title>Create a Account</title>
+            </Helmet>
             <Fade>
                 <h1 className='font-Bebas text-3xl text-center my-4 mb-7'>Create an account</h1>
             </Fade>

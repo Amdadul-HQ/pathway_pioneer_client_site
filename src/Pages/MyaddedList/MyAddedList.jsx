@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { IoEyeSharp } from 'react-icons/io5';
 import { MdDelete, MdEdit } from 'react-icons/md';
 import { Link, useLoaderData } from 'react-router-dom';
@@ -66,6 +67,9 @@ const MyAddedList = () => {
     return (<section 
     className='w-full mt-5 mb-32 md:px-0 px-3'
     >
+        <Helmet>
+            <title>My List</title>
+        </Helmet>
         <div className='max-w-[1440px] mx-auto font-Montserrat'>
         <div className="font-Montserrat">
             <table className="table">

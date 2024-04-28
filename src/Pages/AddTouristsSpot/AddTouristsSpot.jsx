@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Context/ContextComponent";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const AddTouristsSpot = () => {
@@ -53,6 +54,9 @@ const AddTouristsSpot = () => {
         className="w-full h-screen md:mb-0 mb-80 bg-[linear-gradient(45deg,rgba(0,0,0,0.7),rgba(0,0,0,0.70)),url('/background.png')] backdrop-blur-7xl bg-cover bg-center bg-no-repeat "
 
         >
+            <Helmet>
+                <title>Add Tourists Spot</title>
+            </Helmet>
          <div className="max-w-xl mx-auto relative font-Montserrat top-9 text-white ">
 
          <form  className="backdrop-blur-xl border p-6 rounded-lg absolute w-full space-y-4" onSubmit={handleAddSpot}>

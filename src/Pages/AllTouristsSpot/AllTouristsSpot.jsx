@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { FaUsers } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -26,6 +27,9 @@ const AllTouristsSpot = () => {
 
     return (
         <section className="max-w-[1440px] mx-auto md:px-0 px-5">
+            <Helmet>
+                <title>All Tourist Spot</title>
+            </Helmet>
              <div className="flex justify-center my-5">
 			<details className="dropdown">
 			<summary className="m-1 btn bg-[#23BE0A] text-lg font-semibold text-white hover:text-[#131313] mx-auto">Sort By</summary>

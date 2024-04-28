@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Context/ContextComponent";
+import { Helmet } from "react-helmet-async";
 
 const ViewTouristsSpot = () => {
     const spot = useLoaderData()
@@ -9,6 +10,9 @@ const ViewTouristsSpot = () => {
     // country,tourists_spot_name,spot_location,short_description,bordered_radio,totalVisitorsPerYear,photourl,travel_time,average_cost,email,userName
     return (
         <section className="max-w-[1440px] mx-auto my-20 font-Montserrat md:px-0 px-5">
+            <Helmet>
+                <title>View Details</title>
+            </Helmet>
             <h1 className="text-5xl font-semibold font-Bebas text-center mb-7">Details Page</h1>
                 <div className="grid grid-cols-1  md:grid-cols-3 gap-6 justify-center">
                     <div className="md:col-span-2">
