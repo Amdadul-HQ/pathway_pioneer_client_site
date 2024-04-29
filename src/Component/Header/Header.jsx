@@ -95,10 +95,10 @@ const Header = () => {
                             <div id="clickable" className="w-10 rounded-full">
                             <img className="w-10 h-10 rounded-full " data-tooltip-id="my-tooltip" data-tooltip-place="right" data-tooltip-content={user?.displayName}  src={user?.photoURL || <FaUser className="text-2xl"></FaUser>} alt="" />
                             </div>
-                            <Tooltip anchorSelect="#clickable" clickable>
-                                <button onClick={handleLogOut}><NavLink className="md:hidden lg:flex hidden" >Log Out</NavLink></button>
-                            </Tooltip>
                         </div>
+                            <Tooltip className="z-50" anchorSelect="#clickable" data-tooltip-place="left"  clickable>
+                                <button className="z-50" onClick={handleLogOut}><NavLink className="md:hidden lg:flex hidden" >Log Out</NavLink></button>
+                            </Tooltip>
                         
                         </div>
                     }
