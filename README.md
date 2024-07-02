@@ -37,7 +37,8 @@ Explore exciting tourist spots from around the world, categorized by regions. Wh
 
 **Backend:**
 - MongoDB
-- Express
+- Express.Js
+- Node.Js
 - Vercel (for server deployment)
 
 ## Live Demo:
