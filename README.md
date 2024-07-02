@@ -49,7 +49,7 @@ A live demo of the application can be accessed at: [Live Demo](https://pathway-p
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Amdadul-HQ/querie_client_site.git
+   git clone https://github.com/Amdadul-HQ/pathway_pioneer_client_site.git
    
 2. **Install dependencies**:
    ```bash
